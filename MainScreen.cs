@@ -14,48 +14,56 @@ namespace DialogueEditor
 {
     public partial class MainScreen : Form
     {
-        private XmlDocument xmlDocument;
-
+        #region WindowsForms variables
         private Panel theMainPanel;
         private FlowLayoutPanel pnlDialogueNodes;
         private WaterMarkTextBox txtDialogueName;
         private GroupBox grpbDialogueNodeBox;
-        private GroupBox grpbEditing;
         private Label lblNumberOfNodes;
+        private NumericUpDown numSelectedNode;
+        #endregion
+        #region Functionality variables
         private bool isDialogueOpen;
         private int numberOfNodes;
+        private string nameOfDialogue;
+        private List<ucDialogueNode> ucDialogueNodes;
+        #endregion
 
         public MainScreen () {
             InitializeComponent ();
-
-            InitializeEverything ();
+            InitializeTheRest ();
         }
 
-        private void InitializeEverything () {
+        private void InitializeTheRest () {
             isDialogueOpen = false;
             theMainPanel = mainPanel;
             pnlDialogueNodes = panelDialogueNodes;
-            txtDialogueName = dialogueName;
+            txtDialogueName = textBoxDialogueName;
             grpbDialogueNodeBox = dialogueNodeBox;
-            grpbEditing = groupBoxEditing;
             lblNumberOfNodes = labelNumberofNodes;
-
-            grpbEditing.Visible = false;
-
+            numSelectedNode = numericSelectedNode;
+            
             CreateNew ();
         }
-
         private void CreateNew () {
             isDialogueOpen = true;
-            numberOfNodes = 0;
-
-            // Wipe everything
-
-            UpdateAllText ();
+            
+            WipeEverything ();
+            UpdateGUIText ();
         }
-
-        private void UpdateAllText () {
+        private void WipeEverything () {
+            nameOfDialogue = "";
+            pnlDialogueNodes.Controls.Clear ();
+            numberOfNodes = 0;
+            ucDialogueNodes = new List<ucDialogueNode> ();
+        }
+        private void UpdateGUIText () {
             lblNumberOfNodes.Text = numberOfNodes.ToString ();
+            txtDialogueName.Text = nameOfDialogue;
+            this.Text = "Dialogue Editor";
+        }
+        private void ChangeNodeSelection (int i) {
+
         }
 
         //#region Button functions
@@ -85,12 +93,30 @@ namespace DialogueEditor
         private void MainScreen_FormClosing (object sender, FormClosingEventArgs e) {
             Application.Exit ();
         }
-        private void button1_Click (object sender, EventArgs e) {
-            DialogueNode newDN = new DialogueNode ();
+        private void buttonCreateDialogueNode_Click (object sender, EventArgs e) {
+            ucDialogueNode newDN = new ucDialogueNode (numberOfNodes + 1);
             pnlDialogueNodes.Controls.Add (newDN);
+            ucDialogueNodes.Add (newDN);
+            numSelectedNode.Maximum = numberOfNodes;
             numberOfNodes++;
-
-            UpdateAllText ();
+            
+            UpdateGUIText ();
+        }
+        private void buttonSaveName_Click (object sender, EventArgs e) {
+            nameOfDialogue = txtDialogueName.Text;
+            this.Text = "Dialogue Editor   :   " + nameOfDialogue;
+        }
+        private void textBoxDialogueName_KeyUp (object sender, KeyEventArgs e) {
+            if (e.KeyCode == Keys.Enter) {
+                nameOfDialogue = txtDialogueName.Text;
+                this.Text = "Dialogue Editor   :   " + nameOfDialogue;
+            }
+        }
+        private void buttonEditNode_Click (object sender, EventArgs e) {
+            
+            ChangeNodeSelection ((int)numSelectedNode.Value);
+            // Open editing window
+            MessageBox.Show ("" + (int) numSelectedNode.Value);
         }
     }
 }

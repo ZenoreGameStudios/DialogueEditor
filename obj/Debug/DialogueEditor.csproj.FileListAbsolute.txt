@@ -8,4 +8,4 @@ C:\Users\Usuario\Desktop\Game Studio\Visual Studio Proyectos\DialogueEditor\Dial
 C:\Users\Usuario\Desktop\Game Studio\Visual Studio Proyectos\DialogueEditor\DialogueEditor\obj\Debug\DialogueEditor.pdb
 C:\Users\Usuario\Desktop\Game Studio\Visual Studio Proyectos\DialogueEditor\DialogueEditor\obj\Debug\DialogueEditor.MainScreen.resources
 C:\Users\Usuario\Desktop\Game Studio\Visual Studio Proyectos\DialogueEditor\DialogueEditor\obj\Debug\DialogueEditor.MainMenu.resources
-C:\Users\Usuario\Desktop\Game Studio\Visual Studio Proyectos\DialogueEditor\DialogueEditor\obj\Debug\DialogueEditor.DialogueNode.resources
+C:\Users\Usuario\Desktop\Game Studio\Visual Studio Proyectos\DialogueEditor\DialogueEditor\obj\Debug\DialogueEditor.ucDialogueNode.resources

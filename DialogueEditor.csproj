@@ -46,11 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DialogueNode.cs">
+    <Compile Include="DialogueNode.cs" />
+    <Compile Include="ucDialogueNode.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DialogueNode.Designer.cs">
-      <DependentUpon>DialogueNode.cs</DependentUpon>
+    <Compile Include="ucDialogueNode.Designer.cs">
+      <DependentUpon>ucDialogueNode.cs</DependentUpon>
     </Compile>
     <Compile Include="MainScreen.cs">
       <SubType>Form</SubType>
@@ -69,8 +70,8 @@
     <Compile Include="WaterMarkTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="DialogueNode.resx">
-      <DependentUpon>DialogueNode.cs</DependentUpon>
+    <EmbeddedResource Include="ucDialogueNode.resx">
+      <DependentUpon>ucDialogueNode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
