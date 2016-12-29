@@ -1,6 +1,6 @@
 ﻿namespace DialogueEditor
 {
-    partial class Main
+    partial class MainScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -33,20 +33,22 @@
             this.zenoreGameStudiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.programToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.dialogueNodeBox = new System.Windows.Forms.GroupBox();
+            this.panelDialogueNodes = new System.Windows.Forms.FlowLayoutPanel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dialogueNodeBox = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnNew = new System.Windows.Forms.Button();
+            this.labelNumberofNodes = new System.Windows.Forms.Label();
             this.dialogueName = new DialogueEditor.WaterMarkTextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.groupBoxEditing = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.mainPanel.SuspendLayout();
+            this.dialogueNodeBox.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -111,6 +113,7 @@
             this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainPanel.Controls.Add(this.groupBoxEditing);
             this.mainPanel.Controls.Add(this.dialogueNodeBox);
             this.mainPanel.Controls.Add(this.groupBox2);
             this.mainPanel.Controls.Add(this.groupBox1);
@@ -119,10 +122,51 @@
             this.mainPanel.Size = new System.Drawing.Size(780, 526);
             this.mainPanel.TabIndex = 1;
             // 
+            // dialogueNodeBox
+            // 
+            this.dialogueNodeBox.Controls.Add(this.panelDialogueNodes);
+            this.dialogueNodeBox.Location = new System.Drawing.Point(218, 3);
+            this.dialogueNodeBox.Name = "dialogueNodeBox";
+            this.dialogueNodeBox.Size = new System.Drawing.Size(550, 377);
+            this.dialogueNodeBox.TabIndex = 2;
+            this.dialogueNodeBox.TabStop = false;
+            this.dialogueNodeBox.Text = "Dialogue Nodes";
+            // 
+            // panelDialogueNodes
+            // 
+            this.panelDialogueNodes.AutoScroll = true;
+            this.panelDialogueNodes.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.panelDialogueNodes.Location = new System.Drawing.Point(6, 19);
+            this.panelDialogueNodes.Name = "panelDialogueNodes";
+            this.panelDialogueNodes.Size = new System.Drawing.Size(538, 352);
+            this.panelDialogueNodes.TabIndex = 0;
+            this.panelDialogueNodes.WrapContents = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Location = new System.Drawing.Point(12, 103);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 277);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Controls";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(11, 38);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(170, 36);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Create Dialogue Node";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.labelNumberofNodes);
             this.groupBox1.Controls.Add(this.dialogueName);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 3);
@@ -131,14 +175,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Main Information";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(52, 54);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.ReadOnly = true;
-            this.numericUpDown1.Size = new System.Drawing.Size(129, 20);
-            this.numericUpDown1.TabIndex = 3;
             // 
             // label2
             // 
@@ -158,40 +194,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Name:";
             // 
-            // groupBox2
+            // labelNumberofNodes
             // 
-            this.groupBox2.Location = new System.Drawing.Point(12, 103);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 277);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Controls";
-            // 
-            // dialogueNodeBox
-            // 
-            this.dialogueNodeBox.Location = new System.Drawing.Point(218, 3);
-            this.dialogueNodeBox.Name = "dialogueNodeBox";
-            this.dialogueNodeBox.Size = new System.Drawing.Size(550, 377);
-            this.dialogueNodeBox.TabIndex = 2;
-            this.dialogueNodeBox.TabStop = false;
-            this.dialogueNodeBox.Text = "Dialogue Node";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnNew);
-            this.panel1.Location = new System.Drawing.Point(250, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 291);
-            this.panel1.TabIndex = 2;
-            // 
-            // btnNew
-            // 
-            this.btnNew.Location = new System.Drawing.Point(52, 150);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(150, 50);
-            this.btnNew.TabIndex = 0;
-            this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = true;
+            this.labelNumberofNodes.AutoSize = true;
+            this.labelNumberofNodes.Location = new System.Drawing.Point(55, 56);
+            this.labelNumberofNodes.Name = "labelNumberofNodes";
+            this.labelNumberofNodes.Size = new System.Drawing.Size(97, 13);
+            this.labelNumberofNodes.TabIndex = 3;
+            this.labelNumberofNodes.Text = "labelNumberNodes";
             // 
             // dialogueName
             // 
@@ -203,12 +213,29 @@
             this.dialogueName.WaterMarkColor = System.Drawing.Color.Gray;
             this.dialogueName.WaterMarkText = "Introduce a name";
             // 
-            // Main
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(11, 80);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(170, 36);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Save Dialogue";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxEditing
+            // 
+            this.groupBoxEditing.Location = new System.Drawing.Point(218, 386);
+            this.groupBoxEditing.Name = "groupBoxEditing";
+            this.groupBoxEditing.Size = new System.Drawing.Size(550, 130);
+            this.groupBoxEditing.TabIndex = 3;
+            this.groupBoxEditing.TabStop = false;
+            this.groupBoxEditing.Text = "Editing";
+            // 
+            // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 558);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -216,16 +243,18 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(800, 600);
             this.MinimumSize = new System.Drawing.Size(800, 600);
-            this.Name = "Main";
+            this.Name = "MainScreen";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dialogue Editor";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainScreen_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.mainPanel.ResumeLayout(false);
+            this.dialogueNodeBox.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,15 +270,17 @@
         private System.Windows.Forms.ToolStripMenuItem zenoreGameStudiosToolStripMenuItem;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem programToolStripMenuItem;
         private WaterMarkTextBox dialogueName;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox dialogueNodeBox;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.FlowLayoutPanel panelDialogueNodes;
+        private System.Windows.Forms.Label labelNumberofNodes;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.GroupBox groupBoxEditing;
     }
 }
 

@@ -2,8 +2,10 @@ C:\Users\Usuario\Desktop\Game Studio\Visual Studio Proyectos\DialogueEditor\Dial
 C:\Users\Usuario\Desktop\Game Studio\Visual Studio Proyectos\DialogueEditor\DialogueEditor\bin\Debug\DialogueEditor.exe
 C:\Users\Usuario\Desktop\Game Studio\Visual Studio Proyectos\DialogueEditor\DialogueEditor\bin\Debug\DialogueEditor.pdb
 C:\Users\Usuario\Desktop\Game Studio\Visual Studio Proyectos\DialogueEditor\DialogueEditor\obj\Debug\DialogueEditor.csprojResolveAssemblyReference.cache
-C:\Users\Usuario\Desktop\Game Studio\Visual Studio Proyectos\DialogueEditor\DialogueEditor\obj\Debug\DialogueEditor.Main.resources
 C:\Users\Usuario\Desktop\Game Studio\Visual Studio Proyectos\DialogueEditor\DialogueEditor\obj\Debug\DialogueEditor.Properties.Resources.resources
 C:\Users\Usuario\Desktop\Game Studio\Visual Studio Proyectos\DialogueEditor\DialogueEditor\obj\Debug\DialogueEditor.csproj.GenerateResource.Cache
 C:\Users\Usuario\Desktop\Game Studio\Visual Studio Proyectos\DialogueEditor\DialogueEditor\obj\Debug\DialogueEditor.exe
 C:\Users\Usuario\Desktop\Game Studio\Visual Studio Proyectos\DialogueEditor\DialogueEditor\obj\Debug\DialogueEditor.pdb
+C:\Users\Usuario\Desktop\Game Studio\Visual Studio Proyectos\DialogueEditor\DialogueEditor\obj\Debug\DialogueEditor.MainScreen.resources
+C:\Users\Usuario\Desktop\Game Studio\Visual Studio Proyectos\DialogueEditor\DialogueEditor\obj\Debug\DialogueEditor.MainMenu.resources
+C:\Users\Usuario\Desktop\Game Studio\Visual Studio Proyectos\DialogueEditor\DialogueEditor\obj\Debug\DialogueEditor.DialogueNode.resources
