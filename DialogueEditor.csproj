@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DialogueNode.cs" />
+    <Compile Include="EditingNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditingNode.Designer.cs">
+      <DependentUpon>EditingNode.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucDialogueNode.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     <Compile Include="WaterMarkTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="EditingNode.resx">
+      <DependentUpon>EditingNode.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucDialogueNode.resx">
       <DependentUpon>ucDialogueNode.cs</DependentUpon>
     </EmbeddedResource>

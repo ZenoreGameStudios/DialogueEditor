@@ -36,7 +36,7 @@ namespace DialogueEditor
             originalColour = this.BackColor;
             checkBIsThisSelected = checkBoxSelected;
 
-            dialogueNode = new DialogueNode (0, 0, 0, id, -1);
+            dialogueNode = new DialogueNode (1, 1, 0, id, -1);
             UpdateStats ();
         }
 

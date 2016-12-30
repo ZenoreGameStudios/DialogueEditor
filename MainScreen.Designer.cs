@@ -36,6 +36,8 @@
             this.dialogueNodeBox = new System.Windows.Forms.GroupBox();
             this.panelDialogueNodes = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.numericSelectedNode = new System.Windows.Forms.NumericUpDown();
+            this.buttonEditNode = new System.Windows.Forms.Button();
             this.buttonSaveDialogue = new System.Windows.Forms.Button();
             this.buttonCreateDialogueNode = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -43,15 +45,13 @@
             this.labelNumberofNodes = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonEditNode = new System.Windows.Forms.Button();
             this.textBoxDialogueName = new DialogueEditor.WaterMarkTextBox();
-            this.numericSelectedNode = new System.Windows.Forms.NumericUpDown();
             this.menuStrip1.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.dialogueNodeBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericSelectedNode)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -159,6 +159,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Controls";
             // 
+            // numericSelectedNode
+            // 
+            this.numericSelectedNode.Location = new System.Drawing.Point(142, 90);
+            this.numericSelectedNode.Name = "numericSelectedNode";
+            this.numericSelectedNode.Size = new System.Drawing.Size(39, 20);
+            this.numericSelectedNode.TabIndex = 3;
+            this.numericSelectedNode.ValueChanged += new System.EventHandler(this.numericSelectedNode_ValueChanged);
+            // 
+            // buttonEditNode
+            // 
+            this.buttonEditNode.Location = new System.Drawing.Point(11, 80);
+            this.buttonEditNode.Name = "buttonEditNode";
+            this.buttonEditNode.Size = new System.Drawing.Size(125, 36);
+            this.buttonEditNode.TabIndex = 2;
+            this.buttonEditNode.Text = "Edit Dialogue Node";
+            this.buttonEditNode.UseVisualStyleBackColor = true;
+            this.buttonEditNode.Click += new System.EventHandler(this.buttonEditNode_Click);
+            // 
             // buttonSaveDialogue
             // 
             this.buttonSaveDialogue.Location = new System.Drawing.Point(11, 122);
@@ -167,6 +185,7 @@
             this.buttonSaveDialogue.TabIndex = 1;
             this.buttonSaveDialogue.Text = "Save Dialogue";
             this.buttonSaveDialogue.UseVisualStyleBackColor = true;
+            this.buttonSaveDialogue.Click += new System.EventHandler(this.buttonSaveDialogue_Click);
             // 
             // buttonCreateDialogueNode
             // 
@@ -229,16 +248,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Name:";
             // 
-            // buttonEditNode
-            // 
-            this.buttonEditNode.Location = new System.Drawing.Point(11, 80);
-            this.buttonEditNode.Name = "buttonEditNode";
-            this.buttonEditNode.Size = new System.Drawing.Size(125, 36);
-            this.buttonEditNode.TabIndex = 2;
-            this.buttonEditNode.Text = "Edit Dialogue Node";
-            this.buttonEditNode.UseVisualStyleBackColor = true;
-            this.buttonEditNode.Click += new System.EventHandler(this.buttonEditNode_Click);
-            // 
             // textBoxDialogueName
             // 
             this.textBoxDialogueName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -249,13 +258,6 @@
             this.textBoxDialogueName.WaterMarkColor = System.Drawing.Color.Gray;
             this.textBoxDialogueName.WaterMarkText = "Introduce a name";
             this.textBoxDialogueName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxDialogueName_KeyUp);
-            // 
-            // numericSelectedNode
-            // 
-            this.numericSelectedNode.Location = new System.Drawing.Point(142, 90);
-            this.numericSelectedNode.Name = "numericSelectedNode";
-            this.numericSelectedNode.Size = new System.Drawing.Size(39, 20);
-            this.numericSelectedNode.TabIndex = 3;
             // 
             // MainScreen
             // 
@@ -279,9 +281,9 @@
             this.mainPanel.ResumeLayout(false);
             this.dialogueNodeBox.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericSelectedNode)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericSelectedNode)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
